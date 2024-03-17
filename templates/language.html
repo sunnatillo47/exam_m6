@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Language</th>
+      <th>Info</th>
+      <th>Freamwork</th>
+    </tr>
+  </thead>
+    {% for language in languages %}
+  <tbody>
+      <th>{{ language.id }}</th>
+      <th>{{ language.lan_name }}</th>
+      <th><a style="text-decoration:none;" href={% url 'lan_url' language.id %}>See info 👁‍🗨</a></th>
+       <td><a style="text-decoration:none;" href={% url 'fw_url' language.id %}>Freamwork ⚙️</a></td>
+  </tbody>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Freamwork: <span style="color: green;">{{ info.fw_name}}</span></h1>
+    <hr>
+    <h4 style="color: blue;">{{ info.fw_info }}</h4>
+    <button style="border-radius:10px; margin: 10px; width: 100px; height: 40px; background-color: blue;"><a style="text-decoration:none; color: white;" href={% url 'languages' %}>Back</a></button>
+{% endblock %}
